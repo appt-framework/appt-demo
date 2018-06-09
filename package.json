@@ -3,9 +3,10 @@
   "version": "1.0.1",
   "description": "",
   "main": "main.module.js",
-  "scripts": {    
+  "scripts": {
     "start": "nodemon --exec babel-node ./src/main.module.js",
-    "build": "rimraf dist/ && babel ./ --out-dir dist/ --ignore ./data/,./node_modules,./.babelrc,./package.json,./npm-debug.log --copy-files"
+    "build": "rimraf dist/ && babel ./ --out-dir dist/ --ignore ./data/,./node_modules,./.babelrc,./package.json,./npm-debug.log --copy-files",
+    "build-dev": "./build-packages.sh"
   },
   "keywords": [],
   "author": "",
