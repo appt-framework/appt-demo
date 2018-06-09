@@ -1,7 +1,7 @@
-import { ApptComponent } from '@appt/core';
+import { Component } from '@appt/core';
 import { TSchema } from '@appt/mongoose';
 
-@ApptComponent({
+@Component({
    extend: {
       type: TSchema
    }

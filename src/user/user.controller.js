@@ -1,8 +1,8 @@
-import { ApptComponent } from '@appt/core';
+import { Component } from '@appt/core';
 import { MongooseParse } from '@appt/mongoose';
 
-@ApptComponent({
-   inject: ['UserModel']
+@Component({
+   inject: 'UserModel'
 })
 export class UserController {
    constructor(model){

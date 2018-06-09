@@ -1,6 +1,6 @@
-import { ApptModule } from '@appt/core';
+import { Module } from '@appt/core';
 
-@ApptModule({
+@Module({
    declare: [      
       'ContactRouter',
       'ContactController',

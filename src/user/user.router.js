@@ -1,15 +1,17 @@
-import { ApptComponent } from '@appt/core';
+import { Component } from '@appt/core';
 import { TRouter } from '@appt/api';
 import { Get, Post, Put, Delete } from '@appt/api/router';
 
-@ApptComponent({
+import { UserController } from './user.controller';
+
+@Component({
    extend: {
       type: TRouter,
       config: {
          path: '/user'         
       }
    },
-   inject: ['UserController']
+   inject: UserController
 })
 export class UserRouter {
    constructor(controller){

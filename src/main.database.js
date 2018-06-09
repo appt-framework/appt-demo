@@ -1,10 +1,10 @@
-import { ApptComponent, TDatabase } from '@appt/core';
+import { Component, TDatabase } from '@appt/core';
 import { Mongoose } from '@appt/mongoose';
 
-@ApptComponent({
+@Component({
    extend: {
       type: TDatabase,
-      use: [Mongoose]
+      use: Mongoose
    }
 })
 export class MainDatabase {

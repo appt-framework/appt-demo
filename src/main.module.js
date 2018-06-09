@@ -1,9 +1,9 @@
 import { 
-   ApptModule, 
+   Module, 
    ApptBootstrap 
 } from '@appt/core';
 
-@ApptModule({
+@Module({
    import: [
       'ContactModule',
       'UserModule'

@@ -1,7 +1,8 @@
-import { ApptComponent } from '@appt/core';
+import { Component } from '@appt/core';
+
 import { TServer } from '@appt/api';
 
-@ApptComponent({
+@Component({
    extend: {
       type: TServer
    }

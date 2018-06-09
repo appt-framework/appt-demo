@@ -1,7 +1,7 @@
-import { ApptComponent } from '@appt/core';
+import { Component } from '@appt/core';
 import { MongooseParse } from '@appt/mongoose';
 
-@ApptComponent({
+@Component({
    inject: ['ContactModel']
 })
 export class ContactController {

@@ -1,8 +1,8 @@
-import { ApptComponent } from '@appt/core';
+import { Component } from '@appt/core';
 import { TRouter } from '@appt/api';
 import { Get, Post, Put, Delete } from '@appt/api/router';
 
-@ApptComponent({
+@Component({
    extend: {
       type: TRouter,
       config: {
