@@ -11,6 +11,7 @@ import {
    declare: [      
       'MainDatabase',
       'MainRouter',
+      'MainUtils',
       'MainServer'
    ]
 })
