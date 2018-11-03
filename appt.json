@@ -1,8 +1,9 @@
 {
    "environments": {
       "default": {
-         "include": ["src/**/*.js"],
-         "exclude": []
+         "include": ["src/**/*.js", "seeds/**/*.js"],
+         "exclude": [],
+         "config": "./config/default"
       },
       "development": {
          "config": "./config/development"

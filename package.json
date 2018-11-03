@@ -5,7 +5,7 @@
   "main": "main.module.js",
   "scripts": {
     "start": "export NODE_ENV=development && nodemon --exec babel-node ./src/main.module.js",
-    "start-second": "nodemon --exec babel-node ./src/second.module.js",
+    "seeds": "nodemon --exec babel-node ./seeds/seeds.module.js",
     "build": "rimraf dist/ && babel ./ --out-dir dist/ --ignore ./data/,./node_modules,./.babelrc,./package.json,./npm-debug.log --copy-files",
     "build-dev": "./build-packages.sh"
   },

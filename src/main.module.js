@@ -1,4 +1,4 @@
-import { Module, Bootstrap } from '@appt/core';
+import { Module } from '@appt/core';
 import { TServer } from '@appt/api';
 import { server } from '@appt/core/config';
 
@@ -12,5 +12,3 @@ export class MainModule {
       console.log(`Server running at ${res.config.port}`)
    }
 }
-
-Bootstrap.module(MainModule);

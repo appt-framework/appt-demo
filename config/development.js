@@ -1,6 +1,6 @@
 export default {   
    database: { 
-      uri: 'mongodb://localhost:27017/sample',
+      uri: 'mongodb://localhost:27018/sample',
       options: {
          useNewUrlParser: true,
          debug: false
