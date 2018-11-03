@@ -2,11 +2,15 @@ import { Component } from '@appt/core';
 import { MongooseParse } from '@appt/mongoose';
 
 @Component({
-   inject: ['ContactModel']
+   inject: 'ContactModel'
 })
 export class ContactController {
    constructor(model){
       this.model = model;
+   }
+
+   test(){
+      console.log('test')
    }
 
    getAll(){

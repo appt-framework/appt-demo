@@ -1,14 +1,12 @@
 import { Component, TDatabase } from '@appt/core';
+import { database } from '@appt/core/config';
 import { Mongoose } from '@appt/mongoose';
 
 @Component({
-   extend: {
-      type: TDatabase,
-      use: Mongoose
-   }
+   extend: TDatabase(Mongoose, database.uri, database.options)
 })
 export class MainDatabase {
-   constructor(config){
-      console.log(`Database running at ${config.uri}`)
+   constructor(res){
+      console.log(`Database running at ${res.config.uri}`)
    }
 }

@@ -2,9 +2,6 @@ import { Component } from '@appt/core';
 import { TModel } from '@appt/mongoose';
 
 @Component({
-   extend: {
-      type: TModel,
-      use: ['ContactSchema']
-   }
+   extend: TModel('ContactSchema')
 })
 export class ContactModel {}

@@ -1,20 +1,16 @@
-import { 
-   Module, 
-   ApptBootstrap 
-} from '@appt/core';
+import { Module, Bootstrap } from '@appt/core';
+import { TServer } from '@appt/api';
+import { server } from '@appt/core/config';
 
 @Module({
-   import: [
-      'ContactModule',
-      'UserModule'
-   ],
-   declare: [      
-      'MainDatabase',
-      'MainRouter',
-      'MainUtils',
-      'MainServer'
-   ]
+   extend: TServer(server.port),
+   import: ['ContactModule', 'UserModule'],
+   declare: ['MainDatabase', 'MainRouter']
 })
-export class MainModule {}
+export class MainModule {
+   constructor(res){
+      console.log(`Server running at ${res.config.port}`)
+   }
+}
 
-ApptBootstrap.module('MainModule');
+Bootstrap.module(MainModule);

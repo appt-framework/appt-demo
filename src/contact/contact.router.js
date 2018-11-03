@@ -1,18 +1,11 @@
 import { Component } from '@appt/core';
+import { auth } from '@appt/core/config';
 import { TRouter } from '@appt/api';
 import { Get, Post, Put, Delete } from '@appt/api/router';
 
 @Component({
-   extend: {
-      type: TRouter,
-      config: {
-         path: '/contact',
-         auth: {
-            secret: '87gbi2ep0f138bf1b'
-         }
-      }
-   },
-   inject: ['ContactController']
+   extend: TRouter('/contact', { auth }),
+   inject: 'ContactController'
 })
 export class ContactRouter {
    constructor(controller){

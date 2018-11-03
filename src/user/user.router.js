@@ -3,18 +3,14 @@ import { TRouter } from '@appt/api';
 import { Get, Post, Put, Delete } from '@appt/api/router';
 
 import { UserController } from './user.controller';
+import { MainUtils } from '../main.utils';
 
 @Component({
-   extend: {
-      type: TRouter,
-      config: {
-         path: '/user'         
-      }
-   },
+   extend: TRouter('/user'),
    inject: UserController
 })
 export class UserRouter {
-   constructor(controller){
+   constructor(controller){      
       this.controller = controller;
    }
 

@@ -1,6 +1,24 @@
 {
-   "include": [
-      "src/**/*.js"
-   ],
-   "exclude": []
+   "environments": {
+      "default": {
+         "include": ["src/**/*.js"],
+         "exclude": []
+      },
+      "development": {
+         "config": "./config/development"
+      }
+   },   
+   "scaffolding": {
+      "dir": "boilerplates",
+      "boilerplates": {
+         "module": "https://github.com/apptjs/scaffolding/module",
+         "component": "https://github.com/apptjs/scaffolding/compoent",
+         "api": "https://github.com/apptjs/scaffolding/api",
+         "crud": "https://github.com/apptjs/scaffolding/crud",
+         "authentication": "https://github.com/apptjs/scaffolding/crud"
+      },
+      "templates": {
+         "crud": ["simple-crud", "upload-crud"]
+      }
+   }
 }

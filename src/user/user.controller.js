@@ -8,7 +8,7 @@ export class UserController {
    constructor(model){
       this.model = model;
    }
-
+   
    getAll(){
       return this.model.find({})
    };
@@ -22,11 +22,7 @@ export class UserController {
    }
 
    update(user) {
-      return this.model.update({
-         _id: MongooseParse.ObjectId(user._id)
-      }, { 
-         $set: user 
-      });
+      return this.model.upsertByName(user);
    }
    
    delete(_id) {
